@@ -25,6 +25,9 @@ const galleryImages = document.querySelectorAll(".gallery-item img");
 const lightbox = document.querySelector(".lightbox");
 const lightboxImage = document.querySelector(".lightbox-image");
 
+const lightboxTitle = document.querySelector(".lightbox-title");
+const lightboxDescription = document.querySelector(".lightbox-description");
+
 const close = document.querySelector(".close");
 const prev = document.querySelector(".prev");
 const next = document.querySelector(".next");
@@ -50,9 +53,16 @@ galleryImages.forEach((image, index) => {
 
 
 // Show selected image
-function showImage(){
+function showImage() {
 
-    lightboxImage.src = galleryImages[currentIndex].src;
+    const currentImage = galleryImages[currentIndex];
+
+    lightboxImage.src = currentImage.src;
+
+    lightboxTitle.textContent = currentImage.dataset.title;
+
+    lightboxDescription.textContent =
+        currentImage.dataset.description;
 
 }
 
