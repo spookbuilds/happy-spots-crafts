@@ -114,6 +114,12 @@
 }
 
 
+
+
+
+
+/* mobile */
+
 @media (max-width: 768px) {
 
     .hero {
@@ -174,13 +180,21 @@
         text-align: center;
     }
 
+    .gallery-grid{
+    grid-template-columns:1fr;
+    }
+
+    .gallery-item img{
+    height:auto;
+    }
+
 }
 
 
 
 
 
-
+/* about page */
 
 .about {
     padding: 60px 20px;
@@ -228,11 +242,151 @@
 
 
 
+/* gallery */
+
+.gallery {
+    padding: 60px 20px;
+    max-width:1200px;
+    margin:auto;
+}
+
+
+.gallery h2 {
+    text-align:center;
+    font-size:3rem;
+    margin-bottom:40px;
+}
+
+
+.gallery-grid {
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+
+}
+
+
+.gallery-item {
+
+    overflow:hidden;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+
+}
+
+
+.gallery-item img {
+
+    width:100%;
+    height:350px;
+    object-fit:cover;
+    display:block;
+    transition:transform .3s;
+
+}
+
+
+.gallery-item:hover img {
+
+    transform:scale(1.05);
+
+}
 
 
 
 
 
+
+/* light box */
+
+.lightbox {
+
+    display:none;
+    position:fixed;
+    z-index:1000;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,0.85);
+
+    justify-content:center;
+    align-items:center;
+
+}
+
+
+.lightbox-image {
+
+    max-width:85%;
+    max-height:85%;
+
+    border-radius:15px;
+
+}
+
+
+.close {
+
+    position:absolute;
+    top:20px;
+    right:35px;
+
+    color:white;
+    font-size:50px;
+    cursor:pointer;
+
+}
+
+
+.prev,
+.next {
+
+    position:absolute;
+
+    top:50%;
+    transform:translateY(-50%);
+
+    background:none;
+    border:none;
+
+    color:white;
+    font-size:50px;
+
+    cursor:pointer;
+
+}
+
+
+.prev {
+    left:30px;
+}
+
+
+.next {
+    right:30px;
+}
+
+
+.prev:hover,
+.next:hover,
+.close:hover {
+
+    opacity:0.7;
+
+}
+
+
+
+
+
+
+
+
+
+/* before and after mural pics */
 
 .before-after {
     width: 100%;
@@ -296,7 +450,7 @@
 
 
 
-
+/* footer */
 
 footer {
     background: #5f5f5f;
