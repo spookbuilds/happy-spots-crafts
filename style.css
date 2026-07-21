@@ -55,7 +55,7 @@
 }
 
 .hero-content p {
-    font-size: 2rem;
+    font-size: 1.4rem;
 }
 
 
@@ -180,13 +180,11 @@
         text-align: center;
     }
 
-    .gallery-grid{
-    grid-template-columns:1fr;
+    .gallery-grid,
+    .gallery-box{
+    columns: 1;
     }
-
-    .gallery-item img{
-    height:auto;
-    }
+    
 
 }
 
@@ -251,27 +249,33 @@
 }
 
 
-.gallery h2 {
+.gallery h2,
+.title h2 {
     text-align:center;
     font-size:3rem;
     margin-bottom:40px;
 }
 
-
+/* pet grid */
 .gallery-grid {
 
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
+    columns: 3;
+    column-gap: 25px;
 
+}
+/* vehicle grid */
+.gallery-box {
+    columns: 2;
+    column-gap: 25px;
 }
 
 
 .gallery-item {
-
     overflow:hidden;
     border-radius:20px;
     box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    break-inside: avoid;
+    margin-bottom:25px;
 
 }
 
@@ -279,10 +283,10 @@
 .gallery-item img {
 
     width:100%;
-    height:350px;
-    object-fit:cover;
+    height:auto;
     display:block;
     transition:transform .3s;
+    
 
 }
 
