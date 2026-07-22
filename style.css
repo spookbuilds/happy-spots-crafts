@@ -182,9 +182,12 @@
 
     .gallery-grid,
     .gallery-box{
-    columns: 1;
+    columns: 3;
     }
     
+    body {
+        background: hotpink;
+    }
 
 }
 
