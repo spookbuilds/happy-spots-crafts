@@ -73,7 +73,7 @@
 
 .card-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     max-width: 1200px;
     margin: auto;
@@ -183,6 +183,45 @@
     .gallery-grid,
     .gallery-box{
     columns: 3;
+    }
+
+    .book-description p {
+
+        font-size:1rem;
+        line-height:1.6;
+
+    }
+
+    /* Book preview */
+
+    .book-preview .gallery-item {
+        display:flex;
+        justify-content:center;
+    }
+
+
+    .book-preview .gallery-item img {
+
+        width:350px;
+        max-width:90%;
+
+        border-radius:20px;
+
+        box-shadow:
+        0 10px 25px rgba(0,0,0,0.25);
+
+        cursor:pointer;
+
+    }
+
+
+    /* Hide arrows because only one image */
+
+    .book-preview + .lightbox .prev,
+    .book-preview + .lightbox .next {
+
+        display:none;
+
     }
 
 }
@@ -321,10 +360,14 @@
 }
 
 .lightbox-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 90%;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    width:fit-content;
+    max-width:90vw;
+
 }
 
 .lightbox-title {
@@ -335,18 +378,28 @@
 }
 
 .lightbox-description {
-    color: white;
-    text-align: center;
-    max-width: 700px;
-    line-height: 1.6;
+
+    color:white;
+    text-align:center;
+
+    max-width:500px;
+
+    line-height:1.6;
+
 }
 
 
 .lightbox-image {
 
-    max-width: 100%;
-    max-height: 75vh;
-    border-radius: 15px;
+    display:block;
+
+    max-width:90vw;
+    max-height:75vh;
+
+    width:auto;
+    height:auto;
+
+    object-fit:contain;
 
 }
 
@@ -492,6 +545,90 @@
 
 
 
+
+
+
+
+/* book page */
+.book-description {
+
+    max-width:900px;
+    margin:50px auto;
+    padding:0 20px;
+
+    text-align:center;
+
+}
+
+.book-description p {
+
+    font-size:1.2rem;
+    line-height:1.8;
+    margin-bottom:15px;
+
+    color:#444;
+
+}
+
+.coming-soon {
+
+    max-width:900px;
+    margin:60px auto;
+    padding:20px 20px;
+
+    text-align:center;
+
+    background:white;
+    border-radius:20px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+
+}
+
+.coming-soon h2 {
+
+    font-size:2.5rem;
+    margin-bottom:20px;
+
+}
+
+.contact-box {
+
+    margin-top:40px;
+
+}
+
+.contact-buttons {
+
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin-top:20px;
+
+}
+
+
+/* book cover */
+
+.book-preview {
+
+    text-align:center;
+    padding:10px 20px;
+
+}
+
+
+.book-preview img {
+
+    width:350px;
+    max-width:90%;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.25);
+
+}
 
 
 
