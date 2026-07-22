@@ -467,6 +467,28 @@
     cursor: pointer;
 }
 
+.mural-info {
+    text-align:center;
+    margin-bottom:20px;
+}
+
+
+.mural-info h2 {
+    font-size:2rem;
+    margin-bottom:10px;
+}
+
+
+.mural-info p {
+    max-width:700px;
+    margin:auto;
+}
+
+
+.mural-details {
+    text-align:center;
+    margin-top:20px;
+}
 
 
 
