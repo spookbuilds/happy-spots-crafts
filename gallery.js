@@ -20,7 +20,8 @@ sliders.forEach(slider => {
 
 // Lightbox - 
 
-const galleryImages = document.querySelectorAll(".gallery-item img");
+const galleryImages = document.querySelectorAll(
+    ".gallery-item img, .book-photo-open img");
 
 const lightbox = document.querySelector(".lightbox");
 const lightboxImage = document.querySelector(".lightbox-image");
@@ -36,10 +37,14 @@ const next = document.querySelector(".next");
 let currentIndex = 0;
 
 
-// Open lightbox
+
+ // Open lightbox
 galleryImages.forEach((image, index) => {
 
-    image.addEventListener("click", () => {
+    const clickable =
+        image.closest(".book-photo-open") || image;
+
+    clickable.addEventListener("click", () => {
 
         currentIndex = index;
 
@@ -52,19 +57,30 @@ galleryImages.forEach((image, index) => {
 });
 
 
+
+
 // Show selected image
 function showImage() {
 
     const currentImage = galleryImages[currentIndex];
 
-    lightboxImage.src = currentImage.src;
+    const bookCard = currentImage.closest(".book-photo");
 
-    lightboxTitle.textContent = currentImage.dataset.title;
+    lightboxImage.src = currentImage.src;
+    lightboxImage.alt = currentImage.alt;
+
+    lightboxTitle.textContent =
+        currentImage.dataset.title ||
+        bookCard?.querySelector("figcaption h3")?.textContent ||
+        "";
 
     lightboxDescription.textContent =
-        currentImage.dataset.description;
+        currentImage.dataset.description ||
+        bookCard?.querySelector("figcaption p")?.textContent ||
+        "";
 
 }
+
 
 
 // Next image

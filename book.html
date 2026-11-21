@@ -54,72 +54,182 @@
 
 
 
-<!-- gallery -->
-<section class="book-preview">
 
-    <h2>Colouring Book Preview</h2>
+<!-- Book Launch -->
+<section class="book-launch">
 
-    <img src="images/bookfront.jpg"
-    class="book-cover"
-    alt="Happy Spots Colouring Book Front Cover">
+    <span class="book-launch-tag">
+        ✨ OUT NOW! ✨
+    </span>
 
-</section>
+    <h2>Happy Spots is Here!</h2>
 
-
-
-
-<!-- coming soon section -->
-<section class="coming-soon">
-
-    <h2>Coming Soon</h2>
-
-    <p>
-        To join the mailing list and be one of the first to get your hands 
-        on Happy Spots colouring in book by Emma Arthur, of Happy Spots Crafts 
-        - email your interest via the link below. 
+    <p class="book-launch-intro">
+        The Happy Spots wellbeing colouring book
+        by Emma Arthur is officially available!
+        Take a peek inside and discover a world
+        of wildlife, history, and creativity.
     </p>
 
+    <!-- Book Photos -->
+    <div class="book-showcase">
 
-    <div class="contact-box">
+        <!-- Front Cover -->
+        <figure class="book-photo">
 
-        <h3>Interested?</h3>
+            <button type="button" class="book-photo-open"
+                    aria-label="View book cover">
 
-        <p>Email:
-            <a href="mailto:emz270483@yahoo.co.uk">
-                emz270483@yahoo.co.uk
-            </a>
-        </p>
+                <img src="images/bookfront.jpg"
+                    alt="Happy Spots colouring book front cover"
+                    loading="lazy">
 
+            </button>
 
-        <p>WhatsApp:
-            <a href="tel:07871394587">
-                07871 394587
-            </a>
-        </p>
+            <figcaption>
+                <h3>Meet Happy Spots</h3>
+                <p>
+                    Discover a little book full of
+                    creativity, nature and calm.
+                </p>
+            </figcaption>
 
+        </figure>
 
-        <div class="contact-buttons">
+        <!-- Inside the Book -->
+        <figure class="book-photo">
 
-            <a class="social-button"
-            href="https://www.facebook.com/emmasartsandcrafts"
-            target="_blank">
-                <img src="images/fblogo.png" alt="Facebook">
-            </a>
+            <button type="button" class="book-photo-open"
+                    aria-label="View inside the colouring book">
 
+                <img src="images/colouringbook.jpg"
+                    alt="An illustrated underwater colouring page"
+                    loading="lazy">
 
-            <a class="social-button"
-            href="https://www.etsy.com/uk/shop/HappySpotsCrafts"
-            target="_blank">
-                <img src="images/etsylogo.png" alt="Etsy">
-            </a>
+            </button>
 
-        </div>
+            <figcaption>
+                <h3>Take a Peek Inside</h3>
+                <p>
+                    Detailed illustrations waiting
+                    for your own splash of colour!
+                </p>
+            </figcaption>
+
+        </figure>
+
+        <!-- Book on Display -->
+        <figure class="book-photo book-photo-shelf">
+
+            <button type="button" class="book-photo-open"
+                    aria-label="View book on display">
+
+                <img src="images/colouringbook-shelf.jpg"
+                    alt="Happy Spots colouring book on a bookshelf"
+                    loading="lazy">
+
+            </button>
+
+            <figcaption>
+                <h3>Happy Spots on Display!</h3>
+                <p>
+                    From Emma's illustrations to a
+                    published colouring book, Happy Spots
+                    is now out in the world!
+                </p>
+            </figcaption>
+
+        </figure>
 
     </div>
 
 </section>
 
 
+<!-- Available Now -->
+<section class="book-order">
+
+    <div class="book-order-content">
+
+        <h2>Find Your Happy Spot 🎨</h2>
+
+        <p>
+            Ready to enjoy some peaceful colouring?
+            Whether you're treating yourself or
+            looking for a thoughtful gift, Happy
+            Spots is a lovely way to unwind.
+        </p>
+
+        <p>
+            Get in touch with Emma to find out
+            how to get your own copy!
+        </p>
+
+        <div class="book-order-buttons">
+
+            <a
+                href="mailto:emz270483@yahoo.co.uk?subject=Happy%20Spots%20Colouring%20Book"
+                class="book-button book-button-primary"
+            >
+                Email Emma
+            </a>
+
+            <a
+                href="https://wa.me/447871394587"
+                class="book-button book-button-secondary"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                WhatsApp Emma
+            </a>
+
+        </div>
+
+        <p class="book-etsy">
+            You can also explore more of Emma's
+            creations in her
+            <a
+                href="https://www.etsy.com/uk/shop/HappySpotsCrafts"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Etsy shop
+            </a>.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- Lightbox -->
+<div class="lightbox" role="dialog"
+     aria-modal="true" aria-label="Book photo viewer">
+
+    <button class="close" type="button"
+            aria-label="Close image">&times;</button>
+
+    <button class="prev" type="button"
+            aria-label="Previous image">&#10094;</button>
+
+    <div class="lightbox-content">
+
+        <img class="lightbox-image"
+             src="" alt="">
+
+        <h3 class="lightbox-title"></h3>
+
+        <p class="lightbox-description"></p>
+
+    </div>
+
+    <button class="next" type="button"
+            aria-label="Next image">&#10095;</button>
+
+</div>
 
 
 
